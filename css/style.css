@@ -8,6 +8,9 @@ html, body{
 h1{
     /*margin: 0;*/
 }
+figure{
+    margin: 0;
+}
 
 /*дополнительные блоки----------------*/
 .container{
@@ -167,6 +170,24 @@ price page
     height: 145px;
 }
 
+/*-----------------------------
+item page
+------------------------------------------------*/
+.producy-item{
+    width: 460px;
+}
+.product-description{
+    width: 390px;
+}
+.item-left{
+    float: left;
+}
+.item-center{
+    float: left;
+}
+.item-right{
+    float: right;
+}
 
 /*------------------------
 Системное оформление
