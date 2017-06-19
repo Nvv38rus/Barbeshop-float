@@ -1,18 +1,20 @@
 html, body{
     min-width: 960px;
-    /*min-height: 1750px;*/
+    min-height: 1750px;
     margin: 0;
     padding: 0;
-    font-size: 12px;
-}
-h1{
-    /*margin: 0;*/
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+    background: #000 url("../img/fon.jpg") no-repeat center top;
 }
 figure{
     margin: 0;
 }
 
-/*дополнительные блоки----------------*/
+/*общие блоки----------------*/
 .container{
     width: 940px;
     margin: 0 auto;
@@ -23,6 +25,27 @@ figure{
     display: table;
     clear: both;
 }
+.h1-font-style{
+    font-size: 30px;
+    line-height: 42px;
+    padding-bottom: 35px;
+}
+.btn{
+    text-decoration: none;
+    width: 140px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
 
 /*----------------------------------------
 index page
@@ -31,16 +54,55 @@ index page
 /*блок шапки--------------------------*/
 .main-header{
     width: auto;
+    background-color: #000;
 }
 .main-navigation{
     float: left;
     width: 780px;
     height: 70px;
+    font-size: 16px;
+    line-height: 20px;
 }
-.user-block{
+.main-navigation ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-navigation li{
+    display: inline-block;
+}
+.main-header a{
+    display: block;
+    padding: 25px 20px 25px 20px;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+.main-header a:hover{
+    background-color: #242424;
+}
+.login{
+    position: relative;
+    display: inline-block;
     float: right;
-    width: 140px;
-    height: 70px;
+    width: 65px;
+    text-align: right;
+}
+.login::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/Sprite.png");
+    top: 24px;
+    left: 28px;
+    opacity: 0.3;
+}
+.login:hover::before{
+    opacity: 1;
+    cursor: pointer;
+    background-color: #242424;
 }
 
 /*блок лого----------------------------*/
@@ -51,6 +113,9 @@ index page
 }
 
 /*блок функции-------------------------*/
+.features{
+    text-align: center;
+}
 .features-item{
     float: left;
     width: 300px;
@@ -60,23 +125,72 @@ index page
 .features-item:nth-child(2){
     margin-right: 20px;
 }
+.features-names{
+    position: relative;
+    display: block;
+}
 .features-item p{
-    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.features-names::before{
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 140px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
 }
 
 /*блоки - новости и галерея----------------*/
+.index-content{
+    color: #000;
+    margin-bottom: 35px;
+    background: #f8f5f2 url("../img/fon-content.jpg") repeat;
+}
 .index-content-left{
     float: left;
     width: 380px;
     height: 315px;
-    margin: 55px 80px 50px 80px;
+    margin: 55px 0 50px 80px;
+}
+.index-content-left ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.index-content-left time{
+    text-transform: none;
+    margin-bottom: 30px;
+    display: block;
+}
+.index-content-left p{
+    margin-bottom: 0;
 }
 .index-content-right{
     float: right;
     width: 300px;
-    height: 315px;
-    margin: 55px 80px 50px 0;
+    margin: 55px 80px 0 0;
 }
+.index-content-right span{
+    display: inline-block;
+    padding-bottom: 15px;
+}
+.shadow{
+    margin: 70px 90px 0 0;
+}
+.index-content-right img{
+    border: 7px solid #fff;
+}
+.index-content-right button{
+    margin-top: 20px;
+}
+.index-content-right button:nth-child(2){
+    float: right;
+}
+
 
 /*блоки - инфа и запись-----------------------*/
 
@@ -173,10 +287,13 @@ price page
 /*-----------------------------
 item page
 ------------------------------------------------*/
-.producy-item{
+.product-item{
+    float: left;
     width: 460px;
+    margin-right: 90px;
 }
 .product-description{
+    float: left;
     width: 390px;
 }
 .item-left{
@@ -188,11 +305,14 @@ item page
 .item-right{
     float: right;
 }
+.item-content-up{
+    margin-bottom: 65px;
+}
 
 /*------------------------
 Системное оформление
 -------------------------*/
-
+/*
 body{
     padding: 3px;
 }
